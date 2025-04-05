@@ -171,4 +171,11 @@
     color: #555;
 }
 
+  
 
+  .skills-section {
+    height: 100vh;         /* fills full screen */
+    background-color: #fff;
+    padding-top: 100px;
+    margin-top: -80px;     /* adjust so navbar doesn’t block it */
+  }
