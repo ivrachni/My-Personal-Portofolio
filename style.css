@@ -179,3 +179,161 @@
     padding-top: 100px;
     margin-top: -80px;     /* adjust so navbar doesn’t block it */
   }
+
+  /* —— Skills Section —— */
+
+
+.skills-heading {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 0.5em;
+  }
+  
+  .skills-subheading {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 2em;
+  }
+  
+  /* Να μην κρύβεται πίσω από το sticky navbar όταν κάνεις click από το menu */
+#skills { scroll-margin-top: 100px; }
+
+/* ----- Skills overrides: υποστήριξη και για την "περίεργη" παύλα ----- */
+#skills { scroll-margin-top: 100px; }
+
+/* grid 5×2 */
+.skills-grid, .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  justify-items: center;
+}
+
+/* κουτιά μεγαλύτερα */
+.skill-item, .skill-item {
+  border: 2px solid #000;
+  border-radius: 10px;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+
+/* μέγεθος εικονιδίου (ΚΑΙ για τις δύο κλάσεις) */
+.skill-icon, .skill-icon { 
+  width: 140px; 
+  height: 140px; 
+}
+
+/* hover χωρίς αλλαγή width/height (για να μην “πετάγεται” το layout) */
+.skill-item:hover, .skill-item:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.15);
+  border-color: #333;
+}
+
+/* Προτείνεται να ΜΗΝ κλειδώνεις το ύψος του section για να χωράνε 2 σειρές */
+.skills-section, .skills-section {
+  background-color: #fff;
+  padding-top: 100px;
+  margin-top: -80px;
+  /* height: 100vh;  */ /* βγάλ' το */
+}
+
+/* Experience Section */
+#experience { scroll-margin-top: 110px; }
+
+
+.exp-section {
+    background-color: #000;    /* Ολόμαυρο φόντο */
+    color: #fff;               /* Λευκά γράμματα */
+    padding: 100px 40px;       /* Απόσταση γύρω-γύρω */
+    min-height: 100vh;         /* Να καλύπτει όλο το ύψος της οθόνης */
+  }
+  
+
+  .exp-title {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #fff;
+    font-weight: 900;
+    border: 2px solid #fff;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 6px;
+    margin: 0 auto 40px auto;
+  }
+  
+  
+  .exp-card {
+    background-color: #0d0d0d;   /* λίγο πιο ανοιχτό μαύρο */
+    border: 1.5px solid #333;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 1800px;
+    max-height: 800px;
+    margin: 25px auto;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+    transition: .25s;
+  }
+  
+  
+  .exp-card:hover{
+    border-color:#fff;
+    box-shadow:0 6px 18px rgba(255,255,255,.05) inset, 0 10px 26px rgba(0,0,0,.35);
+    transform:translateY(-2px);
+    transition:.25s;
+  }
+  
+  .exp-row{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:18px;
+  }
+  
+  .exp-role{
+    font-size:1.8rem;
+    line-height:1.2;
+    color:#fff;
+  }
+  
+  .exp-dates{
+    white-space:nowrap;
+    font-weight:700;
+    font-size: 0.88px;
+    color:#ddd;
+    padding-left:14px;
+  }
+  
+  .exp-org{
+    margin-top:6px;
+    color:#bdbdbd;
+    font-style:italic;
+    font-size:1.25rem;
+  }
+  
+  .exp-details{
+    margin-top:10px;
+    padding-left:20px;
+  }
+  
+  .exp-details li{
+    font-size: 1.4rem;
+    margin:8px 0;
+    line-height:1.55;
+  }
+  
+  /* --- Responsive --- */
+  @media (max-width: 780px){
+    .exp-card{ padding:18px; }
+    .exp-row{ flex-direction:column; gap:6px; }
+    .exp-dates{ padding-left:0; font-size:0.95rem; color:#cfcfcf; }
+    .exp-title{ font-size:2rem; }
+  }
