@@ -253,21 +253,20 @@
 .exp-section {
     background-color: #000;    /* Ολόμαυρο φόντο */
     color: #fff;               /* Λευκά γράμματα */
-    padding: 100px 40px;       /* Απόσταση γύρω-γύρω */
-    min-height: 100vh;         /* Να καλύπτει όλο το ύψος της οθόνης */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
   }
   
-
   .exp-title {
-    text-align: center;
     font-size: 2.6rem;
     color: #fff;
     font-weight: 900;
     border: 2px solid #fff;
-    display: inline-block;
     padding: 8px 20px;
     border-radius: 6px;
-    margin: 0 auto 40px auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
   }
   
   
